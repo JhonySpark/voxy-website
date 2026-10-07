@@ -1,0 +1,10 @@
+{
+  "name": "voxy-website",
+  "version": "0.5.9",
+  "private": true,
+  "description": "Voxy Official Landing Page & Presentation Website",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "start": "npx -y serve ."
+  }
+}

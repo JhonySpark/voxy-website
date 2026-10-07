@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voxy | Seu Espaço para Conversar, Jogar e Reunir seu Grupo</title>
+  
+  <!-- SEO & Meta -->
+  <meta name="description" content="Voxy é a plataforma de comunicação por voz e texto criada para reunir amigos, times de jogos e comunidades em um ambiente ágil, organizado e seguro.">
+  <meta name="keywords" content="voxy, chat de voz, salas de voz, bate papo, servidor para amigos, jogos, comunidades">
+  <meta name="author" content="D4rk Side / ATeV Sistemas">
+  <meta name="theme-color" content="#0b0f17">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://voxy.app/">
+  <meta property="og:title" content="Voxy | Seu espaço para conversar, jogar e reunir seu grupo">
+  <meta property="og:description" content="Salas de voz dinâmicas, canais de texto organizados e facilidade para conversar enquanto você joga.">
+  <meta property="og:image" content="favicon.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Voxy | Plataforma de Comunicação por Voz e Texto">
+  <meta property="twitter:description" content="Salas de voz dinâmicas, canais de texto organizados e facilidade para conversar enquanto você joga.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Background Mesh & Grid -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-wrapper" id="brand-logo" aria-label="Voxy Início">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46">
+          <path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z"/>
+        </svg>
+        <span class="logo-text">Voxy</span>
+        <span class="version-badge">v0.5.9</span>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links">
+          <li><a href="#showcase" class="nav-link">Interface</a></li>
+          <li><a href="#features" class="nav-link">Recursos</a></li>
+          <li><a href="#streaming" class="nav-link">Transmissão</a></li>
+          <li><a href="#how-it-works" class="nav-link">Como Funciona</a></li>
+          <li><a href="#safety" class="nav-link">Segurança & Família</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn-primary" id="nav-download-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Baixar Voxy
+        </a>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Abrir Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        
+        <!-- Announcement Pill -->
+        <div class="announcement-pill">
+          <span class="pill-glow-dot"></span>
+          <span>Versão 0.5.9 Disponível</span>
+          <span style="color: var(--text-dim);">•</span>
+          <span style="color: var(--brand-mint);">Mais estabilidade e controles de áudio aprimorados</span>
+        </div>
+
+        <h1 class="hero-title">
+          Seu espaço para conversar,<br>
+          <span class="gradient-text">jogar e reunir seu grupo.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          O Voxy conecta você aos seus amigos em servidores organizados com canais de voz e texto. Simples de usar, rápido para entrar e feito para acompanhar suas partidas sem sobrecarregar seu computador.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#download" class="btn-hero-primary" id="hero-download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Baixar para Windows (x64)
+          </a>
+          <a href="#streaming" class="btn-hero-secondary" id="hero-stream-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Ver Transmissão em Ação
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Voz Clara e Estável</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Canais de Voz e Texto</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Modo Segundo Plano (Tray)</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Segurança e Moderação</span>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE APP SHOWCASE MOCKUP -->
+        <div class="mockup-outer" id="showcase">
+          <div class="mockup-window">
+            
+            <!-- Window Titlebar -->
+            <div class="window-titlebar">
+              <div class="window-controls">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-title">Voxy - Comunidade Oficial [v0.5.9]</div>
+              <div class="window-status">
+                <span class="status-dot"></span>
+                <span>Conectado</span>
+              </div>
+            </div>
+
+            <!-- App Workspace Layout -->
+            <div class="app-layout">
+              
+              <!-- 1. Server Sidebar Rail -->
+              <div class="mock-servers">
+                <div class="mock-server-icon active" title="Voxy Oficial">VO</div>
+                <div class="mock-server-icon" title="Clube dos Gamers">🎮</div>
+                <div class="mock-server-icon" title="Dev & Tech">⚡</div>
+                <div class="mock-server-divider"></div>
+                <div class="mock-server-icon" style="color: var(--brand-mint);" title="Adicionar Servidor">+</div>
+              </div>
+
+              <!-- 2. Channels Sidebar -->
+              <div class="mock-channels">
+                <div>
+                  <div class="channels-header">
+                    <span class="server-brand-name">Voxy Oficial</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
+
+                  <div class="channels-scroll">
+                    <div class="channel-category">
+                      <span>Canais de Texto</span>
+                    </div>
+                    <div class="mock-ch-item active">
+                      <span style="color: var(--brand-mint); font-weight: 700;">#</span>
+                      <span>geral</span>
+                    </div>
+                    <div class="mock-ch-item">
+                      <span style="color: var(--text-dim);">#</span>
+                      <span>clipes-e-jogadas</span>
+                    </div>
+                    <div class="mock-ch-item">
+                      <span style="color: var(--text-dim);">#</span>
+                      <span>anuncios</span>
+                    </div>
+
+                    <div class="channel-category" style="margin-top: 0.75rem;">
+                      <span>Canais de Voz</span>
+                      <span class="voice-live-badge">AO VIVO</span>
+                    </div>
+
+                    <!-- Voice Channel Card -->
+                    <div class="voice-room-card">
+                      <div class="voice-card-header">
+                        <div class="voice-title">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                          <span>Sala da Call</span>
+                        </div>
+                        <span style="font-size: 0.7rem; color: var(--brand-mint); font-weight: 700;" id="demo-call-timer">18:42</span>
+                      </div>
+
+                      <div class="voice-users-mini">
+                        <div class="voice-user-row">
+                          <div class="user-avatar-mini speaking-ring">JS</div>
+                          <span>Jhony (Você)</span>
+                        </div>
+                        <div class="voice-user-row">
+                          <div class="user-avatar-mini speaking-ring">DK</div>
+                          <span>DarkSide</span>
+                        </div>
+                        <div class="voice-user-row">
+                          <div class="user-avatar-mini">AL</div>
+                          <span>Alexandre</span>
+                        </div>
+                        <div class="voice-user-row">
+                          <div class="user-avatar-mini">MT</div>
+                          <span>Matheus</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mock-ch-item" style="margin-top: 4px;">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon></svg>
+                      <span>Duo Competitivo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- User Bar -->
+                <div class="mock-user-bar">
+                  <div class="current-user-info">
+                    <div class="current-user-avatar">
+                      <span class="user-online-dot"></span>
+                    </div>
+                    <div>
+                      <div class="current-user-name">Jhony</div>
+                      <div class="current-user-tag">@jhony #online</div>
+                    </div>
+                  </div>
+                  <div class="user-control-icons">
+                    <button class="user-ctrl-btn" id="demo-mute-btn" title="Mutar/Desmutar Microfone">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                    </button>
+                    <button class="user-ctrl-btn" title="Configurações de Áudio">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Main Chat View -->
+              <div class="mock-chat">
+                <div class="chat-header">
+                  <div class="chat-ch-info">
+                    <span style="color: var(--brand-mint); font-size: 1.1rem;">#</span>
+                    <span>geral</span>
+                    <span class="chat-topic">Canal principal para bater papo e marcar jogatinas</span>
+                  </div>
+                </div>
+
+                <div class="chat-messages">
+                  <!-- Msg 1 -->
+                  <div class="msg-item">
+                    <div class="msg-avatar" style="background: #3b82f6;">DK</div>
+                    <div class="msg-content">
+                      <div class="msg-header">
+                        <span class="msg-author">DarkSide</span>
+                        <span class="msg-author-badge">MOD</span>
+                        <span class="msg-time">Hoje às 20:14</span>
+                      </div>
+                      <div class="msg-body">
+                        Galera, a versão 0.5.9 já está disponível com melhorias na estabilidade das chamadas e ajustes de áudio. Bora fechar o time hoje?
+                      </div>
+                      <div class="msg-reactions">
+                        <span class="msg-reaction-tag reacted">🔥 12</span>
+                        <span class="msg-reaction-tag">❤️ 8</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Msg 2 -->
+                  <div class="msg-item">
+                    <div class="msg-avatar" style="background: #10b981;">AL</div>
+                    <div class="msg-content">
+                      <div class="msg-header">
+                        <span class="msg-author">Alexandre</span>
+                        <span class="msg-time">Hoje às 20:15</span>
+                      </div>
+                      <div class="msg-body">
+                        O som tá ótimo na call! Já entrei na sala de voz, só colar quem for jogar.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Msg 3 -->
+                  <div class="msg-item">
+                    <div class="msg-avatar" style="background: #8b5cf6;">JS</div>
+                    <div class="msg-content">
+                      <div class="msg-header">
+                        <span class="msg-author">Jhony</span>
+                        <span class="msg-time">Hoje às 20:16</span>
+                      </div>
+                      <div class="msg-body">
+                        Entrando agora! Criei um canal de clipes também pra gente compartilhar as jogadas.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chat Input Mockup -->
+                <div class="chat-input-bar">
+                  <div class="mock-input-box">
+                    <span>Conversar em #geral... (suporta markdown e anexos)</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Recursos Principais</span>
+          <h2 class="section-title">Tudo o que seu grupo precisa para se comunicar</h2>
+          <p class="section-subtitle">
+            Desenvolvido para oferecer uma experiência ágil no dia a dia, com ferramentas práticas para conversar por áudio, trocar mensagens e manter suas comunidades organizadas.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </div>
+            <h3 class="feature-title">Salas de Voz Sempre Prontas</h3>
+            <p class="feature-desc">
+              Entre e saia das chamadas com facilidade. Veja quem está falando pelos indicadores visuais, controle o volume de cada pessoa individualmente e acompanhe a duração da conversa.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="feature-title">Leve para o seu Computador</h3>
+            <p class="feature-desc">
+              Uma aplicação rápida e pensada para rodar suavemente enquanto você joga seus games favoritos, sem causar lentidão ou engasgos na sua máquina.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="feature-title">Servidores Personalizados</h3>
+            <p class="feature-desc">
+              Crie seu espaço em segundos. Convide amigos com links rápidos, configure cargos com permissões personalizadas e divida as conversas em múltiplos canais.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Segurança e Moderação</h3>
+            <p class="feature-desc">
+              Ferramentas ativas para manter seu servidor saudável. Silencie, expulse ou bana participantes inconvenientes e proteja seu grupo com facilidade.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="feature-title">Canais de Texto e Mídia</h3>
+            <p class="feature-desc">
+              Compartilhe imagens, clipes de jogadas e links. Formate suas mensagens com markdown, responda mensagens específicas e use reações com emojis.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="feature-title">Modo Segundo Plano (Tray)</h3>
+            <p class="feature-desc">
+              Ao fechar a janela, o Voxy continua conectado na bandeja do sistema para você não perder nada da conversa enquanto realiza outras tarefas.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIVE STREAMING & SCREEN SHARING SHOWCASE -->
+    <section class="section stream-section" id="streaming">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(134, 59, 255, 0.15); color: var(--brand-purple); border-color: rgba(134, 59, 255, 0.3);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+            Transmissão de Tela & Live Stream
+          </span>
+          <h2 class="section-title">Transmita suas gameplays com máxima estabilidade e nitidez</h2>
+          <p class="section-subtitle">
+            Compartilhe sua tela ou janela em até 60 FPS com alta definição, áudio do jogo sincronizado e sem pesar nas suas partidas. Ideal para transmitir campeonatos, assistir streams de amigos ou mostrar jogadas épicas.
+          </p>
+        </div>
+
+        <div class="stream-player-container">
+          
+          <!-- VOXY SCREEN SHARING APP WINDOW -->
+          <div class="stream-window-box">
+            
+            <!-- Window Titlebar -->
+            <div class="window-titlebar">
+              <div class="window-controls">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-title">Voxy - Cheiradores de parede - [Voz Geral]</div>
+              <div class="window-status">
+                <span class="status-dot"></span>
+                <span>Chamada Ativa</span>
+              </div>
+            </div>
+
+            <!-- App Workspace Layout (Real Voxy App Layout) -->
+            <div class="stream-app-layout">
+              
+              <!-- 1. Channels Sidebar (Fiel ao Voxy real) -->
+              <div class="real-voxy-sidebar">
+                <div>
+                  <div class="sidebar-server-header">
+                    <div class="server-title-group">
+                      <span>Cheiradores de parede</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-dim);"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+
+                  <div class="real-invite-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                    <span>Convidar Usuários</span>
+                  </div>
+
+                  <div class="sidebar-search-box">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <span>Buscar canais...</span>
+                  </div>
+
+                  <div class="channel-category" style="padding: 0 1rem; margin-top: 0.5rem;">
+                    <span>CANAIS DE TEXTO</span>
+                  </div>
+                  <div class="mock-ch-item" style="margin: 2px 0.85rem;">
+                    <span style="color: var(--text-dim); font-weight: 700;">#</span>
+                    <span>geral</span>
+                  </div>
+
+                  <div class="channel-category" style="padding: 0 1rem; margin-top: 0.85rem; display: flex; justify-content: space-between;">
+                    <span>CANAIS DE VOZ</span>
+                    <span class="live-tag-mini" style="background: rgba(52, 211, 153, 0.2); color: var(--brand-mint); border: 1px solid rgba(52, 211, 153, 0.4);">1 LIVE</span>
+                  </div>
+
+                  <div class="voice-ch-header">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                      <span>Voz Geral</span>
+                    </div>
+                    <span style="font-size: 0.7rem; font-weight: 600; color: var(--brand-mint);">1:29:08</span>
+                  </div>
+
+                  <div class="voice-member-row">
+                    <span class="voice-status-dot"></span>
+                    <span>Maxsr1</span>
+                  </div>
+                  <div class="voice-member-row">
+                    <span class="voice-status-dot"></span>
+                    <span style="color: var(--brand-mint); font-weight: 600;">Jhony Spark (Você)</span>
+                  </div>
+                  <div class="voice-member-row">
+                    <span class="voice-status-dot"></span>
+                    <span>charleskkjj</span>
+                  </div>
+                </div>
+
+                <!-- User Bar (Como no Voxy) -->
+                <div class="mock-user-bar">
+                  <div class="current-user-info">
+                    <div class="current-user-avatar">
+                      <span class="user-online-dot"></span>
+                    </div>
+                    <div>
+                      <div class="current-user-name">Jhony Spark</div>
+                      <div class="current-user-tag">@jhony #online</div>
+                    </div>
+                  </div>
+                  <div class="user-control-icons">
+                    <button class="user-ctrl-btn" title="Microfone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path></svg></button>
+                    <button class="user-ctrl-btn" title="Áudio"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle></svg></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Voice Room Main Stage (MaximizedStreamView + Minimized Strip + VoiceControlBar) -->
+              <div class="real-voiceroom-stage">
+                <div class="voiceroom-content">
+                  
+                  <!-- Main Maximized Stream Card -->
+                  <div class="voiceroom-stream-card">
+                    <video 
+                      class="voiceroom-stream-video" 
+                      id="stream-video-element"
+                      autoplay 
+                      muted 
+                      loop 
+                      playsinline 
+                      poster="assets/stream-preview.jpg"
+                    >
+                      <source src="https://assets.mixkit.co/videos/preview/mixkit-gameplay-of-a-first-person-shooter-video-game-41381-large.mp4" type="video/mp4">
+                      Seu navegador não suporta a reprodução deste vídeo.
+                    </video>
+
+                    <div class="voiceroom-stream-badge">
+                      <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+                      <span>DarkSide (Compartilhando Tela)</span>
+                    </div>
+
+                    <div class="voiceroom-stream-top-actions">
+                      <button class="voiceroom-action-btn" id="stream-fullscreen-btn" title="Maximizar / Tela Cheia">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Real Voxy Minimized Strip (Participants in Call) -->
+                  <div class="real-minimized-strip">
+                    <div class="real-participant-card speaking">
+                      <div class="real-card-mic">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path></svg>
+                      </div>
+                      <div class="real-card-avatar" style="border: 2px solid var(--brand-mint);">JS</div>
+                      <div class="real-card-name">Você</div>
+                    </div>
+
+                    <div class="real-participant-card">
+                      <div class="real-card-mic">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path></svg>
+                      </div>
+                      <div class="real-card-avatar" style="background: #1e3a8a;">MX</div>
+                      <div class="real-card-name">Maxsr1</div>
+                    </div>
+
+                    <div class="real-participant-card">
+                      <div class="real-card-mic">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path></svg>
+                      </div>
+                      <div class="real-card-avatar" style="background: #374151;">CK</div>
+                      <div class="real-card-name">charleskkjj</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Real Voxy VoiceControlBar (Exact Match to VoiceControlBar.tsx) -->
+                <div class="real-voice-control-bar">
+                  <button class="real-ctrl-btn real-mic-btn" id="stream-mute-btn" title="Mutar Microfone">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                  </button>
+
+                  <button class="real-ctrl-btn real-screen-btn" id="stream-play-btn" title="Pausar / Reproduzir Transmissão">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </button>
+
+                  <button class="real-ctrl-btn real-disconnect-btn" title="Desconectar da Sala">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"></path><line x1="23" y1="1" x2="1" y2="23"></line></svg>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Stream Perks (Redesenhados: layout vertical sem espremer o texto) -->
+          <div class="stream-perks-grid">
+            <div class="stream-perk-card">
+              <div class="stream-perk-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="stream-perk-title">Alta Fluidez em 60 FPS</h3>
+              <p class="stream-perk-desc">Transmissão suave sem borrões ou travamentos para jogos competitivos de ritmo acelerado.</p>
+            </div>
+
+            <div class="stream-perk-card">
+              <div class="stream-perk-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+              <h3 class="stream-perk-title">Áudio Sincronizado</h3>
+              <p class="stream-perk-desc">O som do jogo e as vozes da call chegam em harmonia sem atrasos ou dessincronia.</p>
+            </div>
+
+            <div class="stream-perk-card">
+              <div class="stream-perk-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="stream-perk-title">Janela ou Monitor Inteiro</h3>
+              <p class="stream-perk-desc">Escolha compartilhar um programa ou jogo específico, ou a sua tela completa com apenas um clique.</p>
+            </div>
+
+            <div class="stream-perk-card">
+              <div class="stream-perk-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              </div>
+              <h3 class="stream-perk-title">Otimizado e leve</h3>
+              <p class="stream-perk-desc">Otimizado para manter o desempenho do seu PC estável sem comprometer sua taxa de quadros no jogo.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION (SUBSTITUI A TABELA DE COMPARAÇÃO) -->
+    <section class="section" id="how-it-works" style="background: rgba(9, 13, 20, 0.4);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Como Funciona</span>
+          <h2 class="section-title">Pronto em poucos passos</h2>
+          <p class="section-subtitle">
+            Sem configurações complicadas ou burocracia para reunir a galera.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Crie seu Servidor</h3>
+            <p class="step-desc">
+              Dê um nome ao seu espaço, adicione um ícone e monte canais de texto e salas de voz organizados para o que o seu grupo precisa.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Chame seus Amigos</h3>
+            <p class="step-desc">
+              Envie um código de convite ou adicione as pessoas diretamente da sua lista de amigos no aplicativo com apenas um clique.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Entre na Sala e Divirta-se</h3>
+            <p class="step-desc">
+              Clique em qualquer canal de voz para conectar o microfone na hora e começar a jogar, conversar ou compartilhar seus momentos.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SAFETY & ETHICS SECTION -->
+    <section class="section" id="safety">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="color: #f87171;">Compromisso e Família</span>
+          <h2 class="section-title">Ambiente Seguro para Jovens e Comunidades</h2>
+          <p class="section-subtitle">
+            O Voxy adota práticas de proteção e conformidade legal para que grupos de todas as idades possam interagir com tranquilidade.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="feature-card" style="border-color: rgba(239, 68, 68, 0.2);">
+            <div class="feature-icon-box" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #f87171;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Classificação Etária para Servidores</h3>
+            <p class="feature-desc">
+              Servidores marcados com conteúdo adulto (+18) contam com restrição de acesso para que menores de idade não sejam expostos a temas impróprios.
+            </p>
+          </div>
+
+          <div class="feature-card" style="border-color: rgba(52, 211, 153, 0.2);">
+            <div class="feature-icon-box" style="background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.3); color: var(--brand-mint);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3 class="feature-title">Canal de Denúncias Integrado</h3>
+            <p class="feature-desc">
+              Ferramenta rápida para reportar abusos, assédio ou violações de regras, auxiliando moderadores a manterem seus ambientes limpos.
+            </p>
+          </div>
+
+          <div class="feature-card" style="border-color: rgba(56, 189, 248, 0.2);">
+            <div class="feature-icon-box" style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="feature-title">Conformidade com a Legislação</h3>
+            <p class="feature-desc">
+              Desenvolvido com respeito às diretrizes do Estatuto da Criança e do Adolescente (ECA) e às normas de privacidade da legislação brasileira.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section class="download-section" id="download">
+      <div class="container">
+        
+        <div class="download-card-banner">
+          <span class="section-tag">Pronto para começar?</span>
+          <h2 class="download-title">Baixe o Voxy e junte seus amigos</h2>
+          <p class="download-subtitle">
+            Instale no Windows para a melhor experiência com áudio de alta fidelidade, transmissão de tela suave e execução em segundo plano.
+          </p>
+
+          <div class="download-actions">
+            <a href="https://github.com/voxy/releases/download/v0.5.9/Voxy-Setup-0.5.9.exe" class="btn-hero-primary" id="btn-download-exe">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Baixar para Windows 64-bit</span>
+            </a>
+          </div>
+
+          <div class="download-meta">
+            Compatível com Windows 10 e Windows 11 (64-bit) • Instalação rápida e segura
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" id="faq">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Dúvidas Frequentes</span>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-subtitle">
+            Tudo o que você precisa saber sobre o Voxy para começar a usar.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>O que é o Voxy?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>O Voxy é uma plataforma de comunicação por voz e texto criada para reunir amigos, equipes de jogos e comunidades em um ambiente ágil, organizado e com suporte a salas de voz e canais de texto.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quais são os requisitos do sistema para rodar o Voxy no Windows?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>O Voxy é compatível com Windows 10 e Windows 11 (64-bit). Ele foi desenvolvido para ser extremamente leve e otimizado, ocupando poucos recursos do processador e memória para rodar suavemente em segundo plano enquanto você joga.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>O aplicativo continua funcionando se eu fechar a janela?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Sim! O aplicativo desktop para Windows se mantém na bandeja do sistema (System Tray), permitindo que você continue conversando na chamada de voz sem manter a janela aberta na sua barra de tarefas.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funciona a segurança e classificação etária (+18)?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>O Voxy possui classificação etária em conformidade com as diretrizes do ECA e da legislação de proteção de dados. Servidores marcados como conteúdo adulto exigem confirmação de maioridade e ficam restritos, mantendo crianças e adolescentes protegidos.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como convido meus amigos para o meu servidor?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Você pode gerar um código de convite para compartilhar com seu grupo ou adicionar pessoas diretamente a partir da sua lista de amigos dentro do próprio Voxy.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 48 46">
+              <path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z"/>
+            </svg>
+            <span class="logo-text" style="font-size: 1.25rem;">Voxy</span>
+          </div>
+          <p>
+            A plataforma de comunicação por voz e texto para comunidades de amigos e jogadores.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Produto</h5>
+          <ul>
+            <li><a href="#download">Baixar para Windows</a></li>
+            <li><a href="#showcase">Interface do Aplicativo</a></li>
+            <li><a href="#features">Recursos de Voz e Texto</a></li>
+            <li><a href="#streaming">Transmissão ao Vivo</a></li>
+            <li><a href="#how-it-works">Como Funciona</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Segurança & Legal</h5>
+          <ul>
+            <li><a href="#safety">Proteção Infantil (ECA)</a></li>
+            <li><a href="#safety">Privacidade & ANPD</a></li>
+            <li><a href="#safety">Diretrizes da Comunidade</a></li>
+            <li><a href="#safety">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Comunidade</h5>
+          <ul>
+            <li><a href="#">Servidor Oficial</a></li>
+            <li><a href="#">Notas de Versão (0.5.9)</a></li>
+            <li><a href="#">Status do Sistema</a></li>
+            <li><a href="#">Suporte & Contato</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>D4rk Side / ATeV Sistemas</strong>. Todos os direitos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+          <a href="#">Segurança</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
