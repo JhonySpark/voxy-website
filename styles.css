@@ -198,15 +198,18 @@ button {
   gap: 0.75rem;
 }
 
+.logo-img,
 .logo-svg {
   width: 38px;
   height: 38px;
-  filter: drop-shadow(0 0 12px rgba(134, 59, 255, 0.5));
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(52, 211, 153, 0.45));
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.logo-wrapper:hover .logo-img,
 .logo-wrapper:hover .logo-svg {
-  transform: scale(1.08) rotate(4deg);
+  transform: scale(1.08) rotate(3deg);
 }
 
 .logo-text {
