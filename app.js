@@ -261,5 +261,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 12. Dynamic GitHub Releases Fetcher (Automatic Latest App Version)
+  const GITHUB_REPO = 'JhonySpark/voxy';
+
+  async function fetchLatestRelease() {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`, {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (!response.ok) {
+        console.warn(`[Voxy Release] GitHub API responded with status ${response.status}`);
+        return;
+      }
+
+      const release = await response.json();
+      const tagName = release.tag_name || 'v0.5.9';
+      const cleanVersion = tagName.replace(/^v/, '');
+
+      // Locate Windows .exe installer
+      const exeAsset = release.assets && release.assets.find((asset) => {
+        const name = asset.name.toLowerCase();
+        return name.endsWith('.exe') && !name.includes('blockmap');
+      });
+
+      // Update download button
+      const downloadBtn = document.getElementById('btn-download-exe');
+      if (downloadBtn && exeAsset) {
+        downloadBtn.href = exeAsset.browser_download_url;
+        const sizeMb = (exeAsset.size / (1024 * 1024)).toFixed(1);
+        
+        const metaElement = document.getElementById('download-file-meta');
+        if (metaElement) {
+          metaElement.innerHTML = `Versão <strong>${tagName}</strong> (~${sizeMb} MB) • Compatível com Windows 10 e 11 (64-bit) • <a href="${release.html_url}" target="_blank" rel="noopener" style="color: var(--brand-violet-light); text-decoration: underline;">Notas da Versão</a>`;
+        }
+      }
+
+      // Update all version badges in header / navbar
+      document.querySelectorAll('.version-badge').forEach((el) => {
+        el.textContent = tagName;
+      });
+
+      // Update hero pill version text
+      const heroVersionText = document.getElementById('hero-version-text');
+      if (heroVersionText) {
+        heroVersionText.textContent = `Versão ${cleanVersion} Disponível`;
+      }
+
+      // Update footer release notes link & version label
+      const footerNotesLink = document.getElementById('footer-release-notes');
+      if (footerNotesLink) {
+        footerNotesLink.href = release.html_url || `https://github.com/${GITHUB_REPO}/releases`;
+      }
+      document.querySelectorAll('.version-label').forEach((el) => {
+        el.textContent = cleanVersion;
+      });
+
+      console.log(`[Voxy Release] Latest release updated successfully: ${tagName} (${exeAsset ? exeAsset.name : 'No EXE found'})`);
+    } catch (error) {
+      console.warn('[Voxy Release] Unable to fetch latest release from GitHub, using fallback values.', error);
+    }
+  }
+
+  fetchLatestRelease();
+
   console.log('⚡ Voxy Official Website initialized successfully.');
 });
