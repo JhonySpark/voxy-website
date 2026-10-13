@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade e Proteção de Dados | Voxy</title>
+  
+  <!-- SEO & Meta -->
+  <meta name="description" content="Política de Privacidade e Proteção de Dados da plataforma Voxy em conformidade com a LGPD e o Marco Civil da Internet.">
+  <meta name="author" content="D4rk Side Studio / ATeV Sistemas">
+  <meta name="theme-color" content="#0b0f17">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Política de Privacidade | Voxy">
+  <meta property="og:description" content="Conheça nosso compromisso com a privacidade, dados coletados e seus direitos como usuário.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-page {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+    .legal-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .legal-nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .legal-tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-glass-hover);
+    }
+    .legal-tab-btn.active {
+      color: #06090e;
+      background: var(--brand-mint);
+      border-color: var(--brand-mint);
+      font-weight: 600;
+      box-shadow: 0 0 15px var(--brand-mint-glow);
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 1.5rem;
+      }
+    }
+    .legal-title {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .legal-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--brand-mint);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+    .legal-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legal-content h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background: var(--brand-mint);
+      border-radius: 2px;
+    }
+    .legal-content h3 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin: 1.5rem 0 0.5rem;
+    }
+    .legal-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .legal-content strong {
+      color: var(--text-main);
+    }
+    .legal-content ul, .legal-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .legal-content li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-glass);
+    }
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    .legal-table th {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      font-weight: 600;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-glass);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .legal-table tr:last-child td {
+      border-bottom: none;
+    }
+    .legal-highlight-box {
+      background: rgba(52, 211, 153, 0.06);
+      border-left: 4px solid var(--brand-mint);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.5rem 0;
+    }
+    .legal-highlight-box p {
+      margin: 0;
+      color: var(--text-main);
+    }
+    .contact-box {
+      background: rgba(134, 59, 255, 0.08);
+      border: 1px solid rgba(134, 59, 255, 0.3);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .contact-box h4 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin: 0;
+    }
+    .contact-box a {
+      color: var(--brand-cyan);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="brand-logo" aria-label="Voxy Início">
+        <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="38" height="38">
+        <span class="logo-text">Voxy</span>
+        <span class="version-badge">v0.5.19</span>
+      </a>
+
+      <nav aria-label="Navegação">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="privacy.html" class="nav-link active" style="color: var(--brand-mint);">Privacidade</a></li>
+          <li><a href="terms.html" class="nav-link">Termos</a></li>
+          <li><a href="safety.html" class="nav-link">Segurança & Menores</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/JhonySpark/voxy/releases/latest/download/Voxy-Setup.exe" class="btn-primary-sm">
+          <span>Baixar App</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legal Main Section -->
+  <main class="legal-page">
+    <div class="legal-container">
+
+      <!-- Navigation Tabs -->
+      <nav class="legal-nav-tabs" aria-label="Seções legais">
+        <a href="privacy.html" class="legal-tab-btn active">🔒 Política de Privacidade</a>
+        <a href="terms.html" class="legal-tab-btn">📜 Termos de Uso</a>
+        <a href="safety.html" class="legal-tab-btn">🛡️ Proteção Infantil & ECA</a>
+      </nav>
+
+      <!-- Document Card -->
+      <article class="legal-card">
+        <header>
+          <span class="legal-badge">LGPD & ANPD COMPLIANT</span>
+          <h1 class="legal-title">Política de Privacidade e Proteção de Dados</h1>
+          <div class="legal-meta-bar">
+            <span><strong>Versão:</strong> 1.0</span>
+            <span>•</span>
+            <span><strong>Última Atualização:</strong> Março de 2026</span>
+            <span>•</span>
+            <span><strong>Controlador:</strong> D4rk Side Studio / Voxy</span>
+            <span>•</span>
+            <span><strong>Encarregado (DPO):</strong> dpo@voxychat.com.br</span>
+          </div>
+        </header>
+
+        <div class="legal-content">
+          <div class="legal-highlight-box">
+            <p><strong>Privacidade por Padrão:</strong> Suas conversas pertencem a você. O Voxy não comercializa dados pessoais, não opera redes de anúncios comportamentais e aplica o princípio de minimização estrita e efemeridade em transmissões de voz e vídeo.</p>
+          </div>
+
+          <h2>1. Compromisso com a sua Privacidade</h2>
+          <p>O Voxy foi construído com base no princípio de que <strong>suas conversas privadas pertencem a você</strong>. Não vendemos dados pessoais, não operamos redes de anúncios comportamentais baseadas em vigilância e aplicamos técnicas de <strong>minimização de dados</strong> e <strong>efemeridade</strong> em toda a nossa arquitetura.</p>
+
+          <h2>2. Dados Pessoais Coletados e Tratados</h2>
+          <p>Coletamos apenas as categorias de dados estritamente necessárias para viabilizar as funcionalidades de comunicação da plataforma:</p>
+
+          <div class="legal-table-wrapper">
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Dados Específicos</th>
+                  <th>Finalidade Principal</th>
+                  <th>Base Legal (LGPD)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Identificação Cadastral</strong></td>
+                  <td>Nome de usuário (<code>username</code>), nome de exibição, e-mail e senha criptografada (hash seguro).</td>
+                  <td>Autenticação, criação de perfil social e recuperação de conta.</td>
+                  <td>Execução de Contrato (Art. 7º, V)</td>
+                </tr>
+                <tr>
+                  <td><strong>Classificação Etária</strong></td>
+                  <td>Data de nascimento declarada e sinal de faixa etária retornado por APIs de sistema operacional.</td>
+                  <td>Proteção legal de menores de idade e adequação proporcional de recursos.</td>
+                  <td>Cumprimento de Obrigação Legal e Melhor Interesse do Menor (Art. 14)</td>
+                </tr>
+                <tr>
+                  <td><strong>Registros de Acesso</strong></td>
+                  <td>Endereço IP de origem, data/horário de conexões e identificadores de dispositivo.</td>
+                  <td>Segurança da infraestrutura e guarda obrigatória prevista em lei.</td>
+                  <td>Obrigação Legal (Art. 15 do Marco Civil da Internet)</td>
+                </tr>
+                <tr>
+                  <td><strong>Comunicações e Mídia</strong></td>
+                  <td>Mensagens de texto enviadas em canais ou DMs, reações e imagens anexadas.</td>
+                  <td>Entrega e sincronização das mensagens entre os participantes.</td>
+                  <td>Execução de Contrato (Art. 7º, V)</td>
+                </tr>
+                <tr>
+                  <td><strong>Tráfego de Voz e Vídeo</strong></td>
+                  <td>Áudio em tempo real de chamadas de voz e streaming de jogos via WebRTC.</td>
+                  <td>Transmissão efêmera em tempo real. <strong>NÃO É GRAVADO NEM ARMAZENADO EM DISCO.</strong></td>
+                  <td>Execução de Contrato (Art. 7º, V)</td>
+                </tr>
+                <tr>
+                  <td><strong>Auditoria de Segurança</strong></td>
+                  <td>Registros de moderação (mutes, kicks, bans) e protocolos de denúncia.</td>
+                  <td>Proteção da comunidade contra assédio e garantia da integridade do ambiente.</td>
+                  <td>Legítimo Interesse e Responsabilização (Art. 6º, X)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>3. Tratamento de Dados de Adolescentes (Art. 14 da LGPD e ECA)</h2>
+          <p><strong>3.1. Melhor Interesse do Adolescente:</strong> O tratamento de dados pessoais de adolescentes entre 13 e 17 anos é realizado em estrita observância ao seu melhor interesse, nos termos do Art. 14 da LGPD e das diretrizes da ANPD.</p>
+          <p><strong>3.2. Minimização de Dados:</strong> Coletamos apenas o indispensável para permitir o ingresso no ambiente digital protegido, sem formação de perfil comercial (<em>profiling</em>) e sem publicidade comportamental.</p>
+          <p><strong>3.3. Salvaguardas Especiais:</strong> Contas de adolescentes contam com restrições ativas contra o compartilhamento irrestrito de desktop completo e acesso a conteúdos adultos.</p>
+
+          <h2>4. Compartilhamento Estrito de Dados</h2>
+          <p>O Voxy não comercializa dados sob nenhuma hipótese. O compartilhamento ocorre exclusivamente com parceiros de infraestrutura operacional essenciais para a prestação do serviço:</p>
+          <ul>
+            <li><strong>Banco de Dados Seguro:</strong> Armazenamento transacional protegido por criptografia de dados em repouso e políticas de expiração.</li>
+            <li><strong>LiveKit / SFU Dedicado:</strong> Roteamento de mídia WebRTC em tempo real para chamadas de áudio e streaming (sem retenção de mídias).</li>
+            <li><strong>Serviços de Notificação & E-mail:</strong> Envio transacional de códigos OTP de autenticação e alertas de segurança.</li>
+            <li><strong>Better Stack Telemetry:</strong> Telemetria agregada para diagnóstico de estabilidade e detecção de panes no aplicativo.</li>
+          </ul>
+
+          <h2>5. Medidas de Segurança da Informação</h2>
+          <ol>
+            <li><strong>Criptografia em Trânsito:</strong> Todo o tráfego HTTP e WebSocket é protegido por TLS 1.3, e fluxos de mídia utilizam criptografia SRTP/DTLS ponta a ponta.</li>
+            <li><strong>Criptografia em Repouso:</strong> Senhas e tokens de sessão são protegidos por algoritmos robustos de derivação de chave e encriptação segura do sistema operacional.</li>
+            <li><strong>Controle Estrito de Acesso:</strong> Acesso aos servidores de produção é restrito, com autenticação multifator e logs de auditoria imutáveis.</li>
+            <li><strong>Integridade de Binários Nativos:</strong> Binários de suporte contam com validação de hash criptográfico SHA-256 no arranque para proteção contra adulteração.</li>
+          </ol>
+
+          <h2>6. Direitos dos Titulares de Dados (Art. 18 da LGPD)</h2>
+          <p>Você possui os seguintes direitos garantidos por lei sobre seus dados pessoais:</p>
+          <ul>
+            <li><strong>Acesso e Confirmação:</strong> Saber quais dados tratamos e solicitar cópia dos mesmos;</li>
+            <li><strong>Correção:</strong> Atualizar informações cadastrais diretamente nas configurações do seu aplicativo;</li>
+            <li><strong>Anonimização ou Eliminação:</strong> Solicitar a exclusão de dados excessivos tratados em desconformidade legal;</li>
+            <li><strong>Revogação do Consentimento:</strong> Retirar consentimentos fornecidos previamente;</li>
+            <li><strong>Eliminação Definitiva da Conta:</strong> Solicitar a exclusão integral da sua conta e dados vinculados.</li>
+          </ul>
+
+          <div class="contact-box">
+            <h4>Canal de Atendimento do Titular e DPO</h4>
+            <p>Para exercer qualquer um dos seus direitos ou esclarecer dúvidas sobre esta política, entre em contato diretamente com o nosso Encarregado de Proteção de Dados (DPO):</p>
+            <p><strong>E-mail:</strong> <a href="mailto:dpo@voxychat.com.br">dpo@voxychat.com.br</a></p>
+          </div>
+
+          <h2>7. Atualizações desta Política</h2>
+          <p>Esta Política de Privacidade poderá ser atualizada periodicamente para refletir melhorias técnicas ou adequações legais. Notificaremos os usuários com antecedência sempre que houver alterações substanciais no tratamento de dados.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="32" height="32">
+            <span class="logo-text">Voxy</span>
+          </div>
+          <p class="footer-desc">
+            Comunicação de voz, texto e streaming com foco em privacidade e alta performance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Conformidade & Legal</h5>
+          <ul>
+            <li><a href="privacy.html" style="color: var(--brand-mint);">Política de Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+            <li><a href="safety.html">Proteção Infantil (ECA)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contato DPO</h5>
+          <ul>
+            <li><a href="mailto:dpo@voxychat.com.br">dpo@voxychat.com.br</a></li>
+            <li><a href="https://github.com/JhonySpark/voxy" target="_blank" rel="noopener">Repositório Oficial</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>D4rk Side Studio / ATeV Sistemas</strong>. Todos os direitos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="privacy.html">Privacidade</a>
+          <a href="terms.html">Termos</a>
+          <a href="safety.html">Segurança</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

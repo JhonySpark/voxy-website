@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso da Plataforma | Voxy</title>
+  
+  <!-- SEO & Meta -->
+  <meta name="description" content="Termos de Uso e Serviço da plataforma Voxy, canais de voz, texto e streaming.">
+  <meta name="author" content="D4rk Side Studio / ATeV Sistemas">
+  <meta name="theme-color" content="#0b0f17">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Termos de Uso | Voxy">
+  <meta property="og:description" content="Condições gerais de uso, regras de conduta comunitária e responsabilidades na plataforma Voxy.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-page {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+    .legal-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .legal-nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .legal-tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-glass-hover);
+    }
+    .legal-tab-btn.active {
+      color: #06090e;
+      background: var(--brand-mint);
+      border-color: var(--brand-mint);
+      font-weight: 600;
+      box-shadow: 0 0 15px var(--brand-mint-glow);
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 1.5rem;
+      }
+    }
+    .legal-title {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .legal-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--brand-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .legal-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legal-content h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background: var(--brand-cyan);
+      border-radius: 2px;
+    }
+    .legal-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .legal-content strong {
+      color: var(--text-main);
+    }
+    .legal-content ul, .legal-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .legal-content li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-highlight-box {
+      background: rgba(56, 189, 248, 0.06);
+      border-left: 4px solid var(--brand-cyan);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.5rem 0;
+    }
+    .legal-highlight-box p {
+      margin: 0;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="brand-logo" aria-label="Voxy Início">
+        <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="38" height="38">
+        <span class="logo-text">Voxy</span>
+        <span class="version-badge">v0.5.19</span>
+      </a>
+
+      <nav aria-label="Navegação">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacidade</a></li>
+          <li><a href="terms.html" class="nav-link active" style="color: var(--brand-cyan);">Termos</a></li>
+          <li><a href="safety.html" class="nav-link">Segurança & Menores</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/JhonySpark/voxy/releases/latest/download/Voxy-Setup.exe" class="btn-primary-sm">
+          <span>Baixar App</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legal Main Section -->
+  <main class="legal-page">
+    <div class="legal-container">
+
+      <!-- Navigation Tabs -->
+      <nav class="legal-nav-tabs" aria-label="Seções legais">
+        <a href="privacy.html" class="legal-tab-btn">🔒 Política de Privacidade</a>
+        <a href="terms.html" class="legal-tab-btn active">📜 Termos de Uso</a>
+        <a href="safety.html" class="legal-tab-btn">🛡️ Proteção Infantil & ECA</a>
+      </nav>
+
+      <!-- Document Card -->
+      <article class="legal-card">
+        <header>
+          <span class="legal-badge">TERMS OF SERVICE</span>
+          <h1 class="legal-title">Termos de Uso da Plataforma Voxy</h1>
+          <div class="legal-meta-bar">
+            <span><strong>Versão:</strong> 1.0</span>
+            <span>•</span>
+            <span><strong>Última Atualização:</strong> Março de 2026</span>
+            <span>•</span>
+            <span><strong>Contato:</strong> suporte@voxychat.com.br</span>
+          </div>
+        </header>
+
+        <div class="legal-content">
+          <div class="legal-highlight-box">
+            <p>Estes Termos regem o acesso aos aplicativos para desktop e web, canais de voz, texto e streaming do Voxy. Ao utilizar a plataforma, você concorda com estas regras e com nossa <a href="privacy.html" style="color: var(--brand-cyan); text-decoration: underline;">Política de Privacidade</a>.</p>
+          </div>
+
+          <h2>1. Elegibilidade e Idade Mínima Obrigatória</h2>
+          <p><strong>1.1. Idade Mínima de 13 Anos:</strong> O Voxy <strong>não é destinado a crianças menores de 13 (treze) anos</strong>. O cadastro de menores de 13 anos é expressamente proibido pela legislação e bloqueado na raiz do sistema de autenticação.</p>
+          <p><strong>1.2. Adolescentes (13 a 17 anos):</strong> Usuários com classificação etária jovem podem utilizar a plataforma com proteções ativas, incluindo bloqueio de compartilhamento genérico de desktop e ambientes adultos.</p>
+          <p><strong>1.3. Maiores de 18 Anos:</strong> Recursos com conteúdo maduro são restritos a usuários com maioridade declarada.</p>
+          <p><strong>1.4. Veracidade Cadastral:</strong> O usuário se compromete a fornecer informações verdadeiras no momento do cadastro.</p>
+
+          <h2>2. Cadastro, Conta e Segurança</h2>
+          <p><strong>2.1. Verificação de E-mail:</strong> O acesso requer validação de e-mail por código OTP transacional antes de liberar recursos sociais.</p>
+          <p><strong>2.2. Guarda de Credenciais:</strong> O usuário é responsável por manter a confidencialidade de sua senha e token de acesso.</p>
+          <p><strong>2.3. Uso Pessoal:</strong> Cada conta é pessoal e intransferível.</p>
+
+          <h2>3. Diretrizes de Conduta e Usos Proibidos</h2>
+          <p>É expressamente proibido no Voxy:</p>
+          <ul>
+            <li>Praticar qualquer conduta que coloque em risco crianças ou adolescentes (tolerância zero);</li>
+            <li>Praticar assédio, intimidação, discurso de ódio ou ameaças a qualquer indivíduo;</li>
+            <li>Divulgar dados privados de terceiros (doxxing) sem autorização;</li>
+            <li>Transmitir ou distribuir vírus, códigos maliciosos ou links de phishing;</li>
+            <li>Tentar burlar sistemas de moderação ou sobrecarregar a infraestrutura do serviço.</li>
+          </ul>
+
+          <h2>4. Regras de Transmissão de Tela e Streaming</h2>
+          <p><strong>4.1. Foco em Jogos:</strong> A ferramenta de streaming é orientada primariamente à captura de janelas de jogos em execução.</p>
+          <p><strong>4.2. Proteção de Dados:</strong> O usuário deve assegurar que a janela transmitida não exponha senhas ou dados bancários.</p>
+          <p><strong>4.3. Sem Gravação Permanente:</strong> As transmissões ao vivo operam como fluxos efêmeros em tempo real sem gravação contínua em disco.</p>
+
+          <h2>5. Moderação e Responsabilidade Comunitária</h2>
+          <p>Donos e administradores de servidores são responsáveis pela manutenção de um ambiente saudável em seus canais. O Voxy reserva-se o direito de intervir ou suspender comunidades que violem diretrizes legais de convivência.</p>
+
+          <h2>6. Suspensão e Encerramento de Contas</h2>
+          <p>O descumprimento destes Termos pode resultar em advertência, suspensão cautelar imediata ou rescisão permanente da conta do usuário infrator.</p>
+
+          <h2>7. Legislação Aplicável e Foro</h2>
+          <p>Estes Termos são regidos pelas leis da República Federativa do Brasil, em particular o Marco Civil da Internet (Lei nº 12.965/2014) e a LGPD (Lei nº 13.709/2018).</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="32" height="32">
+            <span class="logo-text">Voxy</span>
+          </div>
+          <p class="footer-desc">
+            Comunicação de voz, texto e streaming com foco em privacidade e alta performance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Conformidade & Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Política de Privacidade</a></li>
+            <li><a href="terms.html" style="color: var(--brand-cyan);">Termos de Uso</a></li>
+            <li><a href="safety.html">Proteção Infantil (ECA)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contato & Suporte</h5>
+          <ul>
+            <li><a href="mailto:suporte@voxychat.com.br">suporte@voxychat.com.br</a></li>
+            <li><a href="mailto:dpo@voxychat.com.br">dpo@voxychat.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>D4rk Side Studio / ATeV Sistemas</strong>. Todos os direitos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="privacy.html">Privacidade</a>
+          <a href="terms.html">Termos</a>
+          <a href="safety.html">Segurança</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

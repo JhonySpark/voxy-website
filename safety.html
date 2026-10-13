@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança e Proteção de Menores | Voxy</title>
+  
+  <!-- SEO & Meta -->
+  <meta name="description" content="Diretrizes de proteção integral a crianças e adolescentes, conformidade com o ECA Digital e políticas de segurança do Voxy.">
+  <meta name="author" content="D4rk Side Studio / ATeV Sistemas">
+  <meta name="theme-color" content="#0b0f17">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Segurança e Proteção de Menores | Voxy">
+  <meta property="og:description" content="Nossas salvaguardas para proteger jovens e garantir uma comunidade segura e acolhedora.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-page {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+    .legal-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .legal-nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .legal-tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-glass-hover);
+    }
+    .legal-tab-btn.active {
+      color: #06090e;
+      background: var(--brand-purple);
+      border-color: var(--brand-purple);
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 0 0 15px var(--brand-purple-glow);
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 1.5rem;
+      }
+    }
+    .legal-title {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .legal-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-glass);
+    }
+    .legal-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(134, 59, 255, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(134, 59, 255, 0.3);
+    }
+    .legal-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legal-content h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background: var(--brand-purple);
+      border-radius: 2px;
+    }
+    .legal-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .legal-content strong {
+      color: var(--text-main);
+    }
+    .legal-content ul, .legal-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .legal-content li {
+      margin-bottom: 0.5rem;
+    }
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .safety-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .safety-card h4 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .safety-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background Mesh -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper" id="brand-logo" aria-label="Voxy Início">
+        <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="38" height="38">
+        <span class="logo-text">Voxy</span>
+        <span class="version-badge">v0.5.19</span>
+      </a>
+
+      <nav aria-label="Navegação">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacidade</a></li>
+          <li><a href="terms.html" class="nav-link">Termos</a></li>
+          <li><a href="safety.html" class="nav-link active" style="color: #c084fc;">Segurança & Menores</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/JhonySpark/voxy/releases/latest/download/Voxy-Setup.exe" class="btn-primary-sm">
+          <span>Baixar App</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legal Main Section -->
+  <main class="legal-page">
+    <div class="legal-container">
+
+      <!-- Navigation Tabs -->
+      <nav class="legal-nav-tabs" aria-label="Seções legais">
+        <a href="privacy.html" class="legal-tab-btn">🔒 Política de Privacidade</a>
+        <a href="terms.html" class="legal-tab-btn">📜 Termos de Uso</a>
+        <a href="safety.html" class="legal-tab-btn active">🛡️ Proteção Infantil & ECA</a>
+      </nav>
+
+      <!-- Document Card -->
+      <article class="legal-card">
+        <header>
+          <span class="legal-badge">ECA DIGITAL & CHILD SAFETY</span>
+          <h1 class="legal-title">Segurança, Família e Proteção Integral de Menores</h1>
+          <div class="legal-meta-bar">
+            <span><strong>Conformidade:</strong> Lei nº 8.069/1990 (ECA) & Art. 14 da LGPD</span>
+            <span>•</span>
+            <span><strong>Canal de Denúncias:</strong> seguranca@voxychat.com.br</span>
+          </div>
+        </header>
+
+        <div class="legal-content">
+          <p>O Voxy adota o princípio da <strong>Proteção Integral</strong> e do <strong>Melhor Interesse da Criança e do Adolescente</strong> no ecossistema digital. Implementamos salvaguardas técnicas nativas de segurança em camadas para prevenir abusos, assédio e exposição indevida.</p>
+
+          <h2>1. Salvaguardas Protetivas Ativas</h2>
+          <div class="safety-grid">
+            <div class="safety-card">
+              <h4>🚫 Bloqueio para Menores de 13 Anos</h4>
+              <p>O registro de crianças com menos de 13 anos é vetado no cadastro, impedindo a criação de conta sem conformidade legal.</p>
+            </div>
+            <div class="safety-card">
+              <h4>🖥️ Transmissão de Tela Restrita</h4>
+              <p>Contas de adolescentes são limitadas à captura focada de jogos, bloqueando a transmissão de telas genéricas que poderiam vazar conversas ou dados privados.</p>
+            </div>
+            <div class="safety-card">
+              <h4>🔞 Bloqueio de Conteúdo +18</h4>
+              <p>Ambientes ou servidores categorizados como maduros são inacessíveis para contas de adolescentes.</p>
+            </div>
+            <div class="safety-card">
+              <h4>🛡️ Canal Ágil de Denúncia</h4>
+              <p>Ferramenta rápida para reportar abusos, assédio ou condutas impróprias com prioridade máxima de análise.</p>
+            </div>
+          </div>
+
+          <h2>2. Tolerância Zero a Abuso e Aliciamento</h2>
+          <p>O Voxy mantém política de tolerância zero absoluta contra qualquer forma de aliciamento (<em>grooming</em>), exploração sexual infantil ou compartilhamento de material ilícito (CSAM/CSAE). Casos identificados resultam em banimento irrevogável, preservação de evidências forenses e notificação imediata às autoridades policiais competentes.</p>
+
+          <h2>3. Diretrizes para Pais e Responsáveis</h2>
+          <p>Recomendamos que pais e responsáveis mantenham diálogo aberto sobre segurança digital e configurem em conjunto os níveis de privacidade da conta do adolescente no aplicativo.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <img src="assets/logo.png" alt="Voxy Logo" class="logo-img" width="32" height="32">
+            <span class="logo-text">Voxy</span>
+          </div>
+          <p class="footer-desc">
+            Comunicação de voz, texto e streaming com foco em privacidade e alta performance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Conformidade & Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Política de Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+            <li><a href="safety.html" style="color: #c084fc;">Proteção Infantil (ECA)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Denúncias de Segurança</h5>
+          <ul>
+            <li><a href="mailto:seguranca@voxychat.com.br">seguranca@voxychat.com.br</a></li>
+            <li><a href="mailto:dpo@voxychat.com.br">dpo@voxychat.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>D4rk Side Studio / ATeV Sistemas</strong>. Todos os direitos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="privacy.html">Privacidade</a>
+          <a href="terms.html">Termos</a>
+          <a href="safety.html">Segurança</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
